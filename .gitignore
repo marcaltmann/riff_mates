@@ -1,0 +1,6 @@
+# All directories
+__pycache__
+
+# Specific directories
+/db.sqlite3
+/.venv
