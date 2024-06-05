@@ -23,4 +23,5 @@ urlpatterns = [
     path('credits/', home_views.credits),
     path('about/', home_views.about),
     path('version/', home_views.version),
+    path('news/', home_views.news_advanced, name="news"),
 ]

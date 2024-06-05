@@ -4,3 +4,4 @@ __pycache__
 # Specific directories
 /db.sqlite3
 /.venv
+/.idea

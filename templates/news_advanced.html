@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ block.super }}: News
+{% endblock %}
+
+{% block content %}
+    <h1>RiffMates News</h1>
+
+    <ul>
+        {% for item in news %}
+            <li class="{% cycle 'odd' 'even' %}">
+                {{ item.0|date:'Y/m/d' }}: {{ item.1 }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
