@@ -17,15 +17,15 @@ def about(request):
 
 def version(request):
     content = {
-        'version': '1.0.0',
+        "version": "1.0.0",
     }
 
-    return JsonResponse(content, json_dumps_params={'indent': 4})
+    return JsonResponse(content, json_dumps_params={"indent": 4})
 
 
 def news(request):
     data = {
-        'news': [
+        "news": [
             "RiffMates now has a news page!",
             "RiffMates has its first web page",
         ],
@@ -36,7 +36,7 @@ def news(request):
 
 def news_advanced(request):
     data = {
-        'news': [
+        "news": [
             (date(2017, 3, 12), "RiffMates now has a news page!"),
             (date(2024, 6, 1), "RiffMates has its first web page"),
         ],
