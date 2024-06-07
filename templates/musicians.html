@@ -23,11 +23,11 @@
 
     {% if page.has_other_pages %}
         {% if page.has_previous %}
-            <a href="{% url 'musicians' %}?page={{ page.previous_page_number }}"
+            <a href="{% url 'musicians' %}?page={{ page.previous_page_number }}&size={{ page_size }}"
             >Prev</a> &nbsp;&nbsp;&nbsp;
         {% endif %}
         {% if page.has_next %}
-            <a href="{% url 'musicians' %}?page={{ page.next_page_number }}"
+            <a href="{% url 'musicians' %}?page={{ page.next_page_number }}&size={{ page_size }}"
             >Next</a>
         {% endif %}
     {% endif %}
