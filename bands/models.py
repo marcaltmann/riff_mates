@@ -6,6 +6,9 @@ class Musician(models.Model):
     last_name = models.CharField(max_length=50, db_index=True)
     birth = models.DateField()
 
+    class Meta:
+        indexes = [models.Index(fields=['last_name', 'first_name'])]
+
     def __str__(self):
         return f"Musician(id={self.id}, last_name={self.last_name})"
 
@@ -23,6 +26,9 @@ class Room(models.Model):
 
     def __str__(self):
         return f"Room(id={self.id}, name={self.name})"
+
+    class Meta:
+        unique_together = (("name", "venue"),)
 
 
 class Band(models.Model):
